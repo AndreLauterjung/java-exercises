@@ -36,6 +36,11 @@ dist/
 # IMPORTANTE: Nunca envie a pasta private para o GitHub
 nbproject/private/
 
-# Arquivos de log e cache do NetBeans
-nbproject/project.xcworkspace
+# --- Configurações e Pastas do NetBeans ---
+build/
+nbbuild/
+dist/
 .nb-gradle/
+
+# Ignora a pasta nbproject e tudo dentro dela
+nbproject/
