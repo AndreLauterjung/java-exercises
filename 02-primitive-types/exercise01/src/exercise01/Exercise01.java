@@ -4,7 +4,7 @@ package exercise01;
  *
  * @author andrelauterjung
  */
-public class exercise01
+public class Exercise01
 {
 
     public static void main(String[] args)
