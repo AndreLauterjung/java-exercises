@@ -1,7 +1,7 @@
 package exercise03;
 
 /**
- * Este é o JavaDoc
+ * Este é o Javadoc
  * 
  * Serve para mostrar informações sobre o documento de forma mais
  * profissional e direta.
@@ -14,6 +14,6 @@ public class Exercise03
     public static void main(String[] args) 
     {
         
-        System.out.println("Exercício 3 - Java doc.");
+        System.out.println("Exercício 3 - Javadoc.");
     } 
 }
