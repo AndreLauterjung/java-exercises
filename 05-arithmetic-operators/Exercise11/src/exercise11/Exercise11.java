@@ -15,8 +15,7 @@ public class Exercise11
         totalItens = numCaixas * itensCaixa;
         
         System.out.println("O total de itens é de: "+totalItens);
-        
-        
+          
     }
     
 }
