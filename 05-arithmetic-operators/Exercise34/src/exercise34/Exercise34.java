@@ -1,11 +1,11 @@
-package exercise35;
+package exercise34;
 
 import java.util.Scanner;
 /**
  *
  * @author andrelauterjung
  */
-public class Exercise35
+public class Exercise34
 {
 
     public static void main(String[] args)
