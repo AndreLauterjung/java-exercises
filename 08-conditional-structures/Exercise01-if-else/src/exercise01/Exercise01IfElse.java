@@ -1,4 +1,4 @@
-package exercise01.pkgif.pkgelse;
+package exercise01;
 
 import java.util.Scanner;
 /**
