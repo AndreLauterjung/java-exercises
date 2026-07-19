@@ -38,11 +38,11 @@ public class Exercise15IfElse
         double soma3 = lado1 + lado3;
         
         
-        if(lado1 < soma2 || lado2 < soma3 || lado3 < soma1)
+        if(lado1 < soma2)
         {
-            if(lado1 < soma2 || lado2 < soma3 || lado3 < soma1)
+            if(lado1 < soma2)
             {
-                if(lado1 < soma2 || lado2 < soma3 || lado3 < soma1)
+                if(lado1 < soma2)
                 {
                     System.out.println("================================================");
                     System.out.println("Com base nos valores digitados, é um triângulo! ");
