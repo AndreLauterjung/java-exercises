@@ -26,8 +26,14 @@ public class Exercise22IfElse
         
         boolean isBissexto;
         
+        int mesLongo1 = 31; // JAN , MAR , MAI, JUL, AGO, OUT, DEZ
+        int mesLongo2 = 30; // ABR , JUN, SET, NOV
         
+        int mesFevBi = 29;
+        int mesFev = 28;
         
+ 
+   
         System.out.println("- - - - - VERIFICADOR DE DATA VÁLIDA - - - - - - -");
         System.out.println("Digite um número referente ao dia: ");
         dia = sc.nextInt();
@@ -42,70 +48,75 @@ public class Exercise22IfElse
         
         isBissexto = ano % 4 == 0;
         
-        
-        
-        if(ano <= 2026) // Início verificação ano
-        { 
-            if(mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12)
-            {
-                if(dia >= 1 && dia <= 31)
-                {
-                    System.out.printf("DIA: %d/%d/%d\n", dia, mes, ano);
-                }
-                else
-                {
-                    System.out.println("Data inválida!");
-                    System.out.println("Dia digitado: "+dia);
-                }
-            }
-            else if(mes == 4 || mes == 6 || mes == 9 || mes == 1)
-            {
-                if(dia >= 1 && dia <= 30)
-                {
-                    System.out.printf("DIA: %d/%d/%d", dia, mes, ano);
-                }
-                else if(dia == 31)
-                {
-                    System.out.println("Este mês não tem dia 31!");
-                    System.out.println("Data inválida!");
-                }
-            }
+      
+        /* Primeiro ocorre a verificação do ano. 
+        Se for maior que 9999, o ano é inválido */
+        if(ano <= 9999)
+        {
             
-            else if(mes == 2) 
+            /* Aqui ocorre a verificação para saber se digitou um número maior ou igual
+            a 1 (Que representa janeiro) e menor ou igual a 12 (que representa dezembro) */
+            if(mes >= 1 && mes <= 12)
             {
-                if(dia >= 1 && dia <= 28)
+                
+                if(mes == 2)
                 {
-                    System.out.printf("DIA: %d/%d/%d\n", dia, mes, ano);
-                }
-                else if(isBissexto)
-                {
-                    if(dia == 29)
+                    /* Se o dia for 29 e o ano for bissexto */
+                    if((dia == 29 && isBissexto))
                     {
-                    System.out.printf("DIA: %d/%d/%d\n", dia, mes, ano);
+                        System.out.printf("DIA: %d/%d/%d\n", dia, mes, ano);
+                    }
+                    
+                    /* Caso o dia não seja igual a 29 e o ano não seja bissexto 
+                    O programa roda este else if */
+                    else if(dia >= 1 && dia <= 28)
+                    {
+                        System.out.printf("DIA: %d/%d/%d\n", dia, mes, ano);
+                    }  
+                    
+                    /* Caso o dia não esteja entre 1 e 28 
+                    A data é inválida */
+                    else
+                    {
+                        System.out.println("Data inválida! ");
                     }
                 }
-                else
+                else if(mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12)
                 {
-                    System.out.println("Data inválida!");
+                    if(dia>= 1 && dia <= mesLongo1)
+                    {
+                        System.out.printf("DIA: %d/%d/%d\n", dia, mes, ano);
+                    }
+                    else
+                    {
+                        System.out.println("Data inválida! ");
+                    }
                 }
-            } // Verificação do mês de fevereiro
-            
-                
-        
+                else if (mes == 4 || mes == 6 || mes == 9 || mes == 1)
+                {
+                    if(dia >= 1 && dia <= mesLongo2)
+                    {
+                        System.out.printf("DIA: %d/%d/%d\n", dia, mes, ano);
+                    }
+                    else
+                    {
+                        System.out.println("Data inválida! ");
+                    }
+                }
+                    
+            }
             else
             {
-                System.out.println("Mês inválido!");
-                
-            } // Fechamento verificação mês
+                System.out.println("Data inválida! ");
+            } // Fechamento estrutua verificação mês
+  
             
         }
-        
         else
         {
-            System.out.println("Ano inválido!");
-            
-        } // Fechamento verificação ano 
-        
+            System.out.println("Data inválida! ");
+        } // Fechamento estrutura verificação ano
+ 
     }
     
 }
