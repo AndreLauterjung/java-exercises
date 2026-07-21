@@ -92,7 +92,7 @@ public class Exercise22IfElse
                         System.out.println("Data inválida! ");
                     }
                 }
-                else if (mes == 4 || mes == 6 || mes == 9 || mes == 1)
+                else if (mes == 4 || mes == 6 || mes == 9 || mes == 11)
                 {
                     if(dia >= 1 && dia <= mesLongo2)
                     {
