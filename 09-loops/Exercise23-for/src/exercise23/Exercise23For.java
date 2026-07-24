@@ -16,14 +16,20 @@ public class Exercise23For
         
         Scanner sc = new Scanner(System.in);
         
+        int qtdTermosUsuario = -1;
         int qtdTermos = 1;
         int num1 = 0;
         int num2 = 1;
         int resultado = 0;
         
         System.out.println("============= SEQUÊNCIA DE FIBONACCI ===============");
+        System.out.println("Digite a quantidade de termos que quer saber o valor: ");
+        System.out.println("Observação: depois de um determinado número de termos,\n"
+                + "começa a ter erro nos valores.");
+        qtdTermosUsuario = sc.nextInt();
+        sc.close();
 
-        for(int i = 1; i <= 35; i++)
+        for(int i = 1; i <= qtdTermosUsuario; i++)
         {
             resultado = num1 + num2;
             
