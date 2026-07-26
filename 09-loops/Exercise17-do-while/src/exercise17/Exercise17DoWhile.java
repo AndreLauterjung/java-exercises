@@ -25,9 +25,9 @@ public class Exercise17DoWhile
         {
             System.out.println("====================================");
             System.out.println("Escolhe uma opção: ");
-            System.out.println("1: água");
-            System.out.println("2: café: ");
-            System.out.println("3: suco de limão");
+            System.out.println("1: Água");
+            System.out.println("2: Café ");
+            System.out.println("3: Duco de Limão");
             opcaoUsuario = sc.nextInt();
             
             System.out.println("====================================");
