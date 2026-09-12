@@ -22,6 +22,8 @@ public class Exercise62
         System.out.println("Digite o tamanho do lado do quadrado: ");
         lado = sc.nextDouble();
         
+        sc.close();
+        
         double area = lado * lado;
         
         System.out.println("Área do quadrado: "+area);
