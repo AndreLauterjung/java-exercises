@@ -26,6 +26,8 @@ public class Exercise63
         System.out.println("Digite o valor total da altura do retângulo: ");
         altura = sc.nextDouble();
         
+        sc.close();
+        
         double area = base * altura;
         
         System.out.println("Área do retângulo: "+area);
