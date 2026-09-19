@@ -343,10 +343,10 @@ public class Carro
                 System.out.println("MARCHA TROCADA! MARCHA ATUAL: "+this.marcha);
                 System.out.println("================================");
             }
-            /*else if(this.velocidade >= 0 && this.velocidade <= 20)
+            else if(this.velocidade >= 0 && this.velocidade <= 20)
             { 
                 this.marcha = 1;
-            }*/
+            }
             
             else if(this.velocidade >= 21 && this.velocidade <= 40)
             {
