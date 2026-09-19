@@ -5,7 +5,7 @@ import java.util.Scanner;
  *
  * @author andrelauterjung
  */
-public class Exercise06Objects
+public class Main
 {
     public static void main(String[] args)
     {
@@ -18,6 +18,7 @@ public class Exercise06Objects
         
         while(isProgramaRodando)
         {
+            System.out.println("\n************ MENU DE OPÇÕES ************");
             System.out.println("1 - Ligar carro");
             System.out.println("2 - Desligar carro");
             System.out.println("3 - Acelerar carro");
@@ -25,6 +26,7 @@ public class Exercise06Objects
             System.out.println("5 - virar para esquerda ou direita");
             System.out.println("6 - verificar velocidade");
             System.out.println("7 - trocar marcha");
+            System.out.println("****************************************");
             opcao = sc.nextInt();
             sc.nextLine();
         
@@ -59,8 +61,9 @@ public class Exercise06Objects
                     carro1.trocarMarcha();
                     break;
             }
-                
+
         }
+        sc.close();
     }
-    
+
 }

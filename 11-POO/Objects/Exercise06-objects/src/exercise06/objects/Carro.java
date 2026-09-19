@@ -22,15 +22,20 @@ public class Carro
     {
         if(isCarroLigado == false)
         {
+            System.out.println("=======================");
             System.out.println("Ligando carro...");
             this.isCarroLigado = true;
             System.out.println("CARRO LIGADO!");
+            System.out.println("=======================");
+            
             this.marcha = 0;
             this.velocidade = 0;
         }
         else
         {
+            System.out.println("=======================");
             System.out.println("O CARRO JÁ ESTÁ LIGADO!");
+            System.out.println("=======================");
         }
     }
     
@@ -40,12 +45,15 @@ public class Carro
         
         if(this.isCarroLigado && this.marcha == 0 && this.velocidade == 0)
         {
+            System.out.println("=======================");
             System.out.println("Desligando carro...");
             this.isCarroLigado = false;
             System.out.println("CARRO DESLIGADO!");
+            System.out.println("=======================");
         }
         else
         {
+            System.out.println("=====================================");
             System.out.println("NÃO É POSSÍVEL DESLIGAR O CARRO!");
             
             if(this.isCarroLigado == false)
@@ -56,6 +64,7 @@ public class Carro
             {
                 System.out.println("A velocidade do carro está acima de 0kmh");
             }
+            System.out.println("============================================");
         }
     }
         
@@ -63,165 +72,217 @@ public class Carro
     {
         if(this.isCarroLigado == false)
         {
+            System.out.println("=========================================================");
             System.out.println("Não é possível realizar ação pois o carro está desligado!");
+            System.out.println("=========================================================");
         }
         
         else if(this.marcha == 0)
         {
+            System.out.println("=======================================");
             System.out.println("Você precisa colocar a primeira marcha!");
+            System.out.println("=======================================");
         }
         
         
         else if(this.marcha == 1 && (this.velocidade >= 0 && this.velocidade <= 20))
         {
+            System.out.println("=======================================");
             this.velocidade += 1;
             System.out.println(verificarVelocidade());    
+            System.out.println("=======================================");
             
             if(this.velocidade == 21 && this.marcha == 1)
             {
+                System.out.println("=================================================");
                 System.out.println("VOCÊ PRECISA TROCAR DE MARCHA PARA ACELERAR MAIS!");
-                this.velocidade = 21;
-                
+                System.out.println("=================================================");
             }
         }
         
         else if(this.marcha == 2 && (this.velocidade >= 21 && this.velocidade <= 40))
         {
+            System.out.println("=======================================");
             this.velocidade += 1;
             System.out.println(verificarVelocidade());
+            System.out.println("=======================================");
             
             if(this.velocidade == 41 && this.marcha == 2)
             {
+                System.out.println("=================================================");
                 System.out.println("VOCÊ PRECISA TROCAR DE MARCHA PARA ACELERAR MAIS!");
-                this.velocidade = 41;
+                System.out.println("=================================================");
             }
         }
         
         else if(this.marcha == 3 && (this.velocidade >= 41 && this.velocidade <= 60))
         {
+            System.out.println("=======================================");
             this.velocidade += 1;
             System.out.println(verificarVelocidade());
+            System.out.println("=======================================");
             
             if(this.velocidade == 61 && this.marcha == 3)
             {
+                System.out.println("=================================================");
                 System.out.println("VOCÊ PRECISA TROCAR DE MARCHA PARA ACELERAR MAIS!");
-                this.velocidade = 61;
+                System.out.println("=================================================");
             }
         }
         
         else if(this.marcha == 4 && (this.velocidade >= 61 && this.velocidade <= 80))
         {
+            System.out.println("=======================================");
             this.velocidade += 1;
             System.out.println(verificarVelocidade());
+            System.out.println("=======================================");
             
             if(this.velocidade == 81 && this.marcha == 4)
             {
+                System.out.println("=================================================");
                 System.out.println("VOCÊ PRECISA TROCAR DE MARCHA PARA ACELERAR MAIS!");
-                this.velocidade = 81;
+                System.out.println("=================================================");
             }
         }
         
         else if(this.marcha == 5 && (this.velocidade >= 81 && this.velocidade <= 100))
         {
+            System.out.println("=======================================");
             this.velocidade += 1;
             System.out.println(verificarVelocidade());
+            System.out.println("=======================================");
             
             if(this.velocidade == 101 && this.marcha == 5)
             {
+                System.out.println("=================================================");
                 System.out.println("VOCÊ PRECISA TROCAR DE MARCHA PARA ACELERAR MAIS!");
-                this.velocidade = 101;
+                System.out.println("=================================================");
             }
         }
 
         else if(this.marcha == 6 && (this.velocidade >= 101 && this.velocidade <= 120))
         {
+            System.out.println("=======================================");
             this.velocidade += 1;
-            System.out.println(verificarVelocidade());
-        }  
             
-        else if(this.velocidade > 120 && this.isCarroLigado == true)
-        {
-
-            System.out.println("Velocidade máxima!");
-            System.out.println("Não é possível acelerar mais!");
-        }    
+            if(this.velocidade > 120)
+            {
+                this.velocidade = 120;
+                System.out.println("=============================");
+                System.out.println("Velocidade máxima!");
+                System.out.println("Não é possível acelerar mais!");
+                System.out.println("=============================");  
+            }
+            System.out.println(verificarVelocidade());
+            System.out.println("=======================================");
+        }  
+               
     }
     
     public void desacelerarCarro()
     {
+        // Funcionou
         if(this.isCarroLigado == false)
         {
             System.out.println("Não é possível realizar ação pois o carro está desligado!");
+            
+        }
+        
+        // Funcionou
+        if(this.isCarroLigado == true && this.velocidade == 0 && (this.marcha == 0 || this.marcha == 1))
+        {
+            System.out.println("Não é possível diminuir mais a velocidade!");
+            System.out.println("É POSSÍVEL DESLIGAR O CARRO!");
+            this.marcha = 0;
+        }
+           
+        
+        if(this.marcha == 1 && this.velocidade >= 0.0 && this.velocidade< 20)
+        {
+            System.out.println("============================================");
+            this.velocidade -= 1;
+            System.out.println(verificarVelocidade());
+            System.out.println("============================================");
+    
+        }
+        
+        if(this.marcha == 2 && this.velocidade == 20)
+        {
+            this.marcha = 1;
+            this.velocidade = 19;
+
+            System.out.println("============================================");
+            System.out.println("VOCÊ PRECISA TROCAR DE MARCHA PARA DESACELERAR MAIS!");
+            System.out.println("============================================");
         }
 
         
-        else if(this.marcha == 1 && (this.velocidade >= 0 && this.velocidade < 20))
+        else if(this.marcha == 2 && (this.velocidade >= 21 && this.velocidade <= 40))
         {
-            if(this.velocidade == 0)
-            {
-                System.out.println("Não é possível diminuir mais a velocidade!");
-            }
-            
-            else
-            {
-                this.velocidade -= 1;
-                System.out.println(verificarVelocidade());
-                
-                if(this.velocidade == 20 && this.marcha == 2)
-                {
-                    System.out.println("VOCÊ PRECISA TROCAR DE MARCHA PARA DESACELERAR MAIS!");
-                }
-            }  
-        }
-        
-        else if(this.marcha == 2 && (this.velocidade >= 21 && this.velocidade < 40))
-        {
+            System.out.println("============================================");
             this.velocidade -= 1;
             System.out.println(verificarVelocidade());
+            System.out.println("============================================");
             
-            if(this.velocidade == 40 && this.marcha == 3)
+            if(this.velocidade <= 40 && this.marcha == 3)
             {
+                System.out.println("============================================");
                 System.out.println("VOCÊ PRECISA TROCAR DE MARCHA PARA DESACELERAR MAIS!");
+                System.out.println("============================================");
             }
         }
         
-        else if(this.marcha == 3 && (this.velocidade >= 41 && this.velocidade < 60))
+        else if(this.marcha == 3 && (this.velocidade >= 41 && this.velocidade <= 60))
         {
+            System.out.println("============================================");
             this.velocidade -= 1;
             System.out.println(verificarVelocidade());
+            System.out.println("============================================");
             
-            if(this.velocidade == 60 && this.marcha == 4)
+            if(this.velocidade <= 60 && this.marcha == 4)
             {
+                System.out.println("============================================");
                 System.out.println("VOCÊ PRECISA TROCAR DE MARCHA PARA DESACELERAR MAIS!");
+                System.out.println("============================================");
             }
         }
         
-        else if(this.marcha == 4 && (this.velocidade >= 61 && this.velocidade < 80))
+        else if(this.marcha == 4 && (this.velocidade >= 61 && this.velocidade <= 80))
         {
+            System.out.println("============================================");
             this.velocidade -= 1;
             System.out.println(verificarVelocidade());
+            System.out.println("============================================");
             
-            if(this.velocidade == 80 && this.marcha == 5)
+            if(this.velocidade <= 80 && this.marcha == 5)
             {
+                System.out.println("============================================");
                 System.out.println("VOCÊ PRECISA TROCAR DE MARCHA PARA DESACELERAR MAIS!");
+                System.out.println("============================================");
             }
         }
         
-        else if(this.marcha == 5 && (this.velocidade >= 81 && this.velocidade < 100))
+        else if(this.marcha == 5 && (this.velocidade >= 81 && this.velocidade <= 100))
         {
+            System.out.println("============================================");
             this.velocidade -= 1;
             System.out.println(verificarVelocidade());
+            System.out.println("============================================");
             
-            if(this.velocidade == 100 && this.marcha == 6)
+            if(this.velocidade <= 100 && this.marcha == 6)
             {
+                System.out.println("============================================");
                 System.out.println("VOCÊ PRECISA TROCAR DE MARCHA PARA DESACELERAR MAIS!");
+                System.out.println("============================================");
             }
         }
 
         else if(this.marcha == 6 && (this.velocidade >= 101 && this.velocidade <= 120))
         {
+            System.out.println("============================================");
             this.velocidade -= 1;
             System.out.println(verificarVelocidade());
+            System.out.println("============================================");
         }  
            
     }
@@ -258,10 +319,11 @@ public class Carro
             
     }
     
-    // retornar String
+    
+    
     public String verificarVelocidade()
     {
-    return "A velocidade do carro é de "+this.velocidade+" KMH!"+
+    return "A velocidade do carro é de "+this.velocidade+" KMH! "+
         "MARCHA: "+this.marcha;
         
     }
@@ -277,33 +339,55 @@ public class Carro
             if(this.marcha == 0 && this.velocidade == 0)
             {
                 this.marcha = 1;
+                System.out.println("================================");
+                System.out.println("MARCHA TROCADA! MARCHA ATUAL: "+this.marcha);
+                System.out.println("================================");
             }
-            else if(this.velocidade >= 0 && this.velocidade <= 20)
+            /*else if(this.velocidade >= 0 && this.velocidade <= 20)
             { 
                 this.marcha = 1;
-            }
+            }*/
+            
             else if(this.velocidade >= 21 && this.velocidade <= 40)
             {
                 this.marcha = 2;
+                System.out.println("================================");
+                System.out.println("MARCHA TROCADA! MARCHA ATUAL: "+this.marcha);
+                System.out.println("================================");
             }
             else if(this.velocidade >= 41 && this.velocidade <= 60)
             {
                 this.marcha = 3;
+                System.out.println("================================");
+                System.out.println("MARCHA TROCADA! MARCHA ATUAL: "+this.marcha);
+                System.out.println("================================");
             }
             else if(this.velocidade >= 61 && this.velocidade <= 80)
             {
                 this.marcha = 4;
+                System.out.println("================================");
+                System.out.println("MARCHA TROCADA! MARCHA ATUAL: "+this.marcha);
+                System.out.println("================================");
             }
             else if(this.velocidade >= 81 && this.velocidade <= 100)
             {
                 this.marcha = 5;
+                System.out.println("================================");
+                System.out.println("MARCHA TROCADA! MARCHA ATUAL: "+this.marcha);
+                System.out.println("================================");
             }
             else if(this.velocidade >= 101 && this.velocidade <= 120)
             {
                 this.marcha = 6;
+                System.out.println("================================");
+                System.out.println("MARCHA TROCADA! MARCHA ATUAL: "+this.marcha);
+                System.out.println("================================");
             }
         }  
     }
         
-    
+    public boolean getCarroLigado()
+    {
+        return this.isCarroLigado;
+    }
 }
