@@ -1,6 +1,6 @@
-package exercise01.objects;
+package exercise01;
 
-import exercise01.objects.Livro;
+import exercise01.Livro;
 /**
  *
  * @author andrelauterjung

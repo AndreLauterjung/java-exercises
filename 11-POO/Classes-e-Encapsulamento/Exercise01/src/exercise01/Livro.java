@@ -1,4 +1,4 @@
-package exercise01.objects;
+package exercise01;
 
 /**
  *
