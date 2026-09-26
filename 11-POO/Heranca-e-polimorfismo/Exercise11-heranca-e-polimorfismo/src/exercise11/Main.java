@@ -31,101 +31,12 @@ public class Main
         RelogioAmericano relogioAmericano = new RelogioAmericano();
         
         
-        System.out.println("Qual a sua região? (BR ou US");
-        String regiao = sc.nextLine();
+        relogioBrasil.entradaDadosRelogioBR(sc, relogioBrasil);
+        relogioAmericano.entradaDadosRelogioAmericano(sc, relogioAmericano);    
+            
+            
+        relogioBrasil.mostrarHora(relogioBrasil);
+        relogioAmericano.mostrarHora(relogioAmericano);
         
-        if(regiao.equalsIgnoreCase("br"))
-        {
-            System.out.println("Hora no formato brasileiro.");
-            System.out.println("Digite as horas: ");
-            int hora = sc.nextInt();
-            
-            if(hora >= 0 && hora <= 23)
-            {
-                relogioBrasil.setHora(hora);
-            }
-            else
-            {
-                System.out.println("Hora inválida!");
-            }
-            
-            System.out.println("Digite os minutos: ");
-            int minuto = sc.nextInt();
-            
-            if(minuto >= 0 && minuto <=59)
-            {
-                relogioBrasil.setMinuto(minuto);
-            }
-            else
-            {
-                System.out.println("Minuto inválido!");
-            }
-            
-            System.out.println("Digite os segundos: ");
-            int segundo = sc.nextInt();
-            
-            if(segundo >= 0 && segundo <= 59)
-            {
-                relogioBrasil.setSegundo(segundo);
-            }
-            else
-            {
-                System.out.println("Segundos inválidos!");
-            }
-            
-            System.out.println(relogioBrasil.mostrarHora(relogioBrasil));
-            
-            
-            
-        }
-        else if(regiao.equalsIgnoreCase("us"))
-        {
-            System.out.println("Hora no formato brasileiro.");
-            System.out.println("Digite as horas: ");
-            int hora = sc.nextInt();
-            
-            if(hora >= 0 && hora <= 12)
-            {
-                relogioAmericano.setHora(hora);
-            }
-            else
-            {
-                System.out.println("Hora inválida!");
-            }
-            
-            
-            
-            System.out.println("Digite os minutos: ");
-            int minuto = sc.nextInt();
-            
-            if(minuto >= 0 && minuto <=59)
-            {
-                relogioAmericano.setMinuto(minuto);
-            }
-            else
-            {
-                System.out.println("Minuto inválido!");
-            }
-            
-            
-            
-            System.out.println("Digite os segundos: ");
-            int segundo = sc.nextInt();
-            
-            if(segundo >= 0 && segundo <= 59)
-            {
-                relogioAmericano.setSegundo(segundo);
-            }
-            else
-            {
-                System.out.println("Segundos inválidos!");
-            }
-            
-            
-            System.out.println(relogioAmericano.mostrarHora(relogioAmericano));
-            
-            
-            
-        }
     }
 }

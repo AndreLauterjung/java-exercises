@@ -1,5 +1,6 @@
 package exercise11;
 
+import java.util.Scanner;
 /**
  *
  * @author andrelauterjung
@@ -18,10 +19,21 @@ public class Relogio
         this.segundo = 0;
     }
     
+    
     public String mostrarHora(Relogio relogio)
     {
         return relogio.getHora()+":"+relogio.getMinuto()+":"+relogio.getSegundo();
+        
     }
+    
+    public void novoRelogio(Relogio relogio)
+    {
+        this.hora = relogio.getHora();
+        this.minuto = relogio.getMinuto();
+        this.segundo = relogio.getSegundo();
+    }
+    
+   
     
     
     // Setters
