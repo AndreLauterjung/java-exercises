@@ -14,7 +14,7 @@ No main, crie um Voador[] (Pato e Aviao) e um Nadador[] (Pato e Peixe).
 Repare que o mesmo Pato cabe nos dois arrays.
 
 */
-package exercise06;
+package exercise05;
 
 /**
  *
