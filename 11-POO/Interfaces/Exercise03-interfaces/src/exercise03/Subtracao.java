@@ -1,14 +1,14 @@
-package exercise02;
+package exercise03;
 
 /**
  *
  * @author andrelauterjung
  */
-public class Multiplicacao implements Operacao
+public class Subtracao implements Operacao
 {
     @Override
     public double calcular(double a, double b)
     {
-        return a * b;
+        return a - b;
     }
 }

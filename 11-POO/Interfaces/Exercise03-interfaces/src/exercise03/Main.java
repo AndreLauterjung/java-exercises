@@ -9,7 +9,7 @@ No main, monte um Operacao[] com uma de cada e imprima o resultado de
 calcular(20, 4) para todas.
 
 */
-package exercise02;
+package exercise03;
 
 /**
  *
