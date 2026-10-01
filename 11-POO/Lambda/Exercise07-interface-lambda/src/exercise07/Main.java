@@ -26,7 +26,7 @@ public class Main
     public static void main(String[] args)
     {
         ValidadorSenha validarSenha = (senha) -> 
-                senha.length() > 6;
+                senha.length() >= 6;
         
         boolean resultado1 = validarSenha.validar("asdf12345");
         boolean resultado2 = validarSenha.validar("afsdf");
