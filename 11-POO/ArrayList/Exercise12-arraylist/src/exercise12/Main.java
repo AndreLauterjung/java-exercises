@@ -22,24 +22,17 @@ public class Main
         alunos.add(new Aluno("Luísa"));
         alunos.add(new Aluno("Carlos"));
         
-        boolean encontrado = false;
+        boolean resultado = alunos.contains(new Aluno("André"));
         
-        for(int i = 0; i < alunos.size(); i++)
+        if(resultado)
         {
-            if(alunos.get(i).getNome().equals("André"))
-            {
-                encontrado = true;
-                break; 
-            }
+            System.out.println("Já existe um aluno na lista!");
+        }
+        else
+        {
+            alunos.add(new Aluno("André"));
+            System.out.println("Nome adicionado!");
         }
         
-        if(encontrado)
-        {
-            System.out.println("Há um André na lista!");
-        } 
-        else 
-        {
-            System.out.println("Não há um André na lista!");
-        }
     }
 }
