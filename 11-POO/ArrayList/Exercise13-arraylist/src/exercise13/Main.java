@@ -37,30 +37,24 @@ public class Main
         String nomeFilme = sc.nextLine();
         sc.close();
        
+        boolean isNaLista = filmes.contains(new Filme(nomeFilme));
         
-          
-        for(int i = 0; i < filmes.size(); i++)
+        if(isNaLista)
         {
-            if(filmes.get(i).getTituloFilme().contains(nomeFilme))
-            {
-                isTemNaLista = true;
-            }
-        }
-        
-        if(isTemNaLista == false)
-        {
-            System.out.println("Filme adicinado!");
-            filmes.add(new Filme(nomeFilme));
+            System.out.println("O filme já está na lista!");
         }
         else
         {
-            System.out.println("Já tem um filme com o mesmo nome na lista!");
+            filmes.add(new Filme(nomeFilme));
+            System.out.println("Filme adicionado!");
+            
+            System.out.println("\nLista de filmes: ");
+            for(Filme discos : filmes)
+            {
+                System.out.println(discos.getTituloFilme());
+            }
         }
+               
         
-        System.out.println("\nLista de filmes: ");
-        for(Filme discos : filmes)
-        {
-            System.out.println(discos.getTituloFilme());
-        }
     }
 }
