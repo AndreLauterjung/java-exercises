@@ -27,7 +27,7 @@ public class Main
         
         if(resultado < 0)
         {
-            System.out.println("Música não encontada");
+            System.out.println("Música não encontrada");
         }
         else if(resultado < (musicas.size() / 2.0))
         {
