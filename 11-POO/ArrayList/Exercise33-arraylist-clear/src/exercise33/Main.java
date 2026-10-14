@@ -25,6 +25,7 @@ public class Main
         
         System.out.println("Limpar lista? (S/n)");
         char resposta = sc.nextLine().charAt(0);
+        sc.close();
         
         if(resposta == 'S' || resposta == 's')
         {
