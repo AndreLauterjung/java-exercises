@@ -18,7 +18,7 @@ public class Main {
         
         texto.append("André");
         texto.append(" ");
-        texto.append("Lauterjung")
+        texto.append("Lauterjung");
         
         System.out.println(texto);
         
