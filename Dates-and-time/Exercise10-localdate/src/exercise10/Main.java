@@ -1,6 +1,6 @@
 /* Enunciado do exercício:
 
-uantos dias faltam
+Quantos dias faltam
 
 - Leia uma data no formato dd/MM/yyyy.
 - Crie LocalDate hoje = LocalDate.now();.
