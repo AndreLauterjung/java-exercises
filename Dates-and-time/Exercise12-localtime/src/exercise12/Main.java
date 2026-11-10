@@ -23,12 +23,9 @@ public class Main {
         LocalTime reuniao = LocalTime.of(14, 30, 45);
         
         System.out.println("\n=========================================");
-        System.out.println("Hora agora: "+horaAgora);
+        System.out.println("Hora agora: "+horaAgora.getHour()+"h "+horaAgora.getMinute()+"min");
         
-        System.out.println("\nHorário Reunião: ");
-        System.out.println("Hora: "+reuniao.getHour());
-        System.out.println("Minuto: "+reuniao.getMinute());
-        System.out.println("Segundo: "+reuniao.getSecond());
+        System.out.println("\nHorário Reunião: "+reuniao.getHour()+":"+reuniao.getMinute()+":"+reuniao.getSecond());
         
         System.out.println("\n=========================================");
         System.out.println("Programa encerrado!");
