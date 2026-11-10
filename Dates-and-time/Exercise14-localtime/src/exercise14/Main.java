@@ -14,8 +14,7 @@ A loja está aberta?
 
 Esperado: Ainda não abriu, Aberto, Fechado e Fechado.
 
-Repare no 18:00: ele não está antes do fechamento, então cai no Fechado. Anote por que, quando a hora é exatamente igual, o isBefore dá false.
- */
+*/
 package exercise14;
 
 import java.time.LocalTime;
